@@ -1,0 +1,50 @@
+
+<html>
+
+
+<head><title>MTA Weekly Pass - Nov 12</title>
+
+<body bgcolor="#4169E1">
+<script type="text/javascript">
+
+function pricePerTrip (numberTrips)
+//this function will calculate the cost of the trip
+{
+	var tripPerCost = 2.5;
+	
+	for (i=1;i<=numberTrips;i++)
+	{
+	
+		totalCost = (i*tripPerCost);
+		document.write("<br />Trip" + i + " cost: " + totalCost.toFixed(2));
+	}
+	if (totalCost<=30)
+		document.write("Pay as you go is best");
+	else
+		document.write("A weekly pass is better");
+		
+}
+
+</script>
+</head>
+<body>
+<h1>Weekly MTA pass VS. Pay As You Go Pass</h1>
+<script type="text/javascript">
+
+var goAgain = prompt("Calculate your weekly total?", "y");
+while (goAgain=="y")
+{
+	//document.write("<br />hello");
+	var numbTrips = prompt("How many trips this week?","8");
+	//You have traveled__trips for the week
+	document.write("<h2>You have traveled " + numbTrips + " for the week</h2>"); 
+	
+	//jump to the price PerTrip function
+	pricePerTrip(numbTrips);
+	
+	 goAgain = prompt("Another calculation?","y");
+}
+
+
+</script>
+</html>
